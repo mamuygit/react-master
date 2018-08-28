@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
+import { Container, Row, Col } from 'reactstrap';
+import styled from "styled-components";
 
-class Header extends Component {
+import logo from '../../images/craze-head.jpg'
+
+export default class Header extends Component {
     render() {
+        const Image = styled.img`
+        width: 150px;
+        margin: 15px 0px;
+      `;
         return (
-            <div className="App">
-                <p className="App-intro">
-                    asdTo get start, edit asd<code>src/App.js</code> and save to reload.
-                </p>
+            <div className="header">
+                <Container>
+                    <Row>
+                        <Col sm="12">
+                            <Image src={logo} />
+                        </Col>
+                    </Row>
+                </Container>
             </div>
         );
     }
 }
-
-export default Header;
