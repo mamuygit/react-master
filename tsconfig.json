@@ -1,0 +1,7 @@
+/* For remove experimentalDecorators in solution only */
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "allowJs": true
+    }
+}
