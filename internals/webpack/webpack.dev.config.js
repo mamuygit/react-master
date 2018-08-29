@@ -5,8 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const developmentConfiguration =
 {
     output: {
-        filename: 'main.js',
-        publicPath: '/assets'
+        filename: 'main.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
