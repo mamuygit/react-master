@@ -68,19 +68,19 @@ export default class Footer extends Component {
                         <Col sm="12">
                             <p>Payment Detail | Delivery Detail | T&C | Privacy Policy | Return Policy | Contact us</p>
                             <span>#crazeTH</span>
-                            <ui>
+                            <ul>
                                 <a href="https://www.facebook.com/crazeTH" target="_blank"><IconFacebook /></a>
                                 <a href="https://www.instagram.com/crazeth" target="_blank"><IconInstagram /></a>
                                 <a href="https://line.me/R/ti/p/%40craze.th" target="_blank"><IconLINE /></a>
                                 <a href="https://www.youtube.com/channel/UCDWb_EXVMeu9jcM4F4tpYoQ" target="_blank"><IconYoutube /></a>
-                            </ui>
-                            <ui>
+                            </ul>
+                            <ul>
                                 <IconCash />
                                 <IconTransfer />
                                 <IconVISA />
                                 <IconMasterCard />
                                 <IconDHL />
-                            </ui>
+                            </ul>
                         </Col>
                     </Row>
                 </Container>
