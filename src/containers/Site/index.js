@@ -8,6 +8,7 @@ import Footer from '../Footer'
 import Home from '../Home'
 import ProductDetails from '../ProductDetails'
 import Cart from '../Cart'
+import Step1 from '../Cart/Step1';
 
 export default class Site extends Component {
 
@@ -34,11 +35,16 @@ export default class Site extends Component {
     return (
       <React.Fragment>
         <Header />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/ProductDetails' component={ProductDetails} />
-          <Route path='/Cart' component={Cart} />
-        </Switch>
+        <Route exact path='/' component={Home} />
+
+        {/* Product */}
+        <Route path='/productDetails' component={ProductDetails} />
+
+        {/* Cart Step */}
+        <Route path='/cart' component={Cart} />
+        <Route path='/cart/step1' component={Step1} />
+        <Route path='/cart/step2' component={Step2} />
+        <Route path='/cart/step3' component={Step3} />
         <Footer />
       </React.Fragment>
     );

@@ -19,11 +19,6 @@ export default class Cart extends Component {
                         <Link to="/Cart/Step1">Step1</Link>
                         , <Link to="/Cart/Step2">Step2</Link>
                         , <Link to="/Cart/Step3">Step3</Link>
-                        <div>
-                            <Route path={`${this.props.match.path}/Step1`} component={Step1} />
-                            <Route path={`${this.props.match.path}/Step2`} component={Step2} />
-                            <Route path={`${this.props.match.path}/Step3`} component={Step3} />
-                        </div>
                     </Col>
                 </Container>
             </div>
