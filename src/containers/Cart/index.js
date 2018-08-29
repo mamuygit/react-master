@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Link, Route } from 'react-router-dom'
 
-import P1 from '../Cart/P1'
-import P2 from '../Cart/P2'
-import P3 from '../Cart/P3'
+import Step1 from '../Cart/Step1'
+import Step2 from '../Cart/Step2'
+import Step3 from '../Cart/Step3'
 
 export default class Cart extends Component {
     render() {
@@ -16,13 +16,13 @@ export default class Cart extends Component {
                         <p><Link to="/ProductDetails">ProductDetails</Link></p>
                         <p><Link to="/Cart">Cart</Link></p>
                         <h1>Cart</h1>
-                        <Link to="/Cart/P1">P1</Link>
-                        , <Link to="/Cart/P2">P2</Link>
-                        , <Link to="/Cart/P3">P3</Link>
+                        <Link to="/Cart/Step1">Step1</Link>
+                        , <Link to="/Cart/Step2">Step2</Link>
+                        , <Link to="/Cart/Step3">Step3</Link>
                         <div>
-                            <Route path={`${this.props.match.path}/P1`} component={P1} />
-                            <Route path={`${this.props.match.path}/P2`} component={P2} />
-                            <Route path={`${this.props.match.path}/P3`} component={P3} />
+                            <Route path={`${this.props.match.path}/Step1`} component={Step1} />
+                            <Route path={`${this.props.match.path}/Step2`} component={Step2} />
+                            <Route path={`${this.props.match.path}/Step3`} component={Step3} />
                         </div>
                     </Col>
                 </Container>

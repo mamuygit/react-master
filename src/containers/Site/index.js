@@ -9,8 +9,6 @@ import Home from '../Home'
 import ProductDetails from '../ProductDetails'
 import Cart from '../Cart'
 
-import P1 from '../Cart/P1'
-
 export default class Site extends Component {
 
   constructor() {
