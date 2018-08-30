@@ -43,9 +43,7 @@ export default class Site extends Component {
         {/* Cart Step */}
         <Route path='/cart' component={Cart} />
         <Route path='/cart/step1' component={Step1} />
-        <Route path='/cart/step2' component={Step2} />
-        <Route path='/cart/step3' component={Step3} />
-        <Footer />
+        <Footer /> 
       </React.Fragment>
     );
   }

@@ -22,6 +22,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
+                exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
                     use: "css-loader!sass-loader",
@@ -74,7 +75,7 @@ module.exports = {
             filename: './index.html',
             inject: true,
         }),
-        new ExtractTextPlugin('style.css'),
+        new ExtractTextPlugin('[name].min.css'),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify(process.env.NODE_ENV),

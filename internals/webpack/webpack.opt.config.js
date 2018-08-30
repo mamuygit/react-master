@@ -1,5 +1,7 @@
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const cssnano = require("cssnano");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const safeParser = require('postcss-safe-parser');
 
 module.exports = {
     optimization: {
@@ -39,6 +41,18 @@ module.exports = {
         ]
     },
     plugins: [
-        new OptimizeCssAssetsPlugin(),
+        new OptimizeCssAssetsPlugin({
+            cssProcessor: cssnano,
+            cssProcessorOptions: {
+                parser: safeParser,
+                discardComments: {
+                    removeAll: true,
+                },
+                // Run cssnano in safe mode to avoid
+                // potentially unsafe transformations.
+                safe: true,
+            },
+            canPrint: false,
+        }),
     ],
 }
