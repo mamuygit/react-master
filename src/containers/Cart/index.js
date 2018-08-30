@@ -5,13 +5,14 @@ import { Link, Route } from 'react-router-dom'
 import Step1 from '../Cart/Step1';
 import Step2 from '../Cart/Step2';
 import Step3 from '../Cart/Step3';
+import autobind from 'autobind-decorator';
 
 export default class Cart extends Component {
 
     componentDidMount() {
-        console.log(this.props);
-        console.log(this.props.match.params.step);
-        console.log(this.props.match.url);
+        // console.log(this.props);
+        // console.log(this.props.match.params.step);
+        // console.log(this.props.match);
     }
 
     render() {

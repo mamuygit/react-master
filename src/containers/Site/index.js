@@ -13,25 +13,6 @@ import Step2 from '../Cart/Step2';
 import Step3 from '../Cart/Step3';
 
 export default class Site extends Component {
-
-  constructor() {
-    super()
-    this.state = { count: 0 };
-  }
-
-  @autobind
-  _handleClick() {
-    this.setState({ count: this.state.count + 1 });
-  }
-
-  componentDidMount() {
-    var wait1000 = new Promise((resolve, reject) => {
-      setTimeout(resolve, 1000)
-    }).then(() => {
-      console.log('Yay!1')
-    })
-  }
-
   render() {
     return (
       <React.Fragment>
