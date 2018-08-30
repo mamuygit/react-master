@@ -6,9 +6,11 @@ import './site.scss';
 import Header from '../Header';
 import Footer from '../Footer'
 import Home from '../Home'
-import ProductDetails from '../ProductDetails'
+import Product from '../Product'
 import Cart from '../Cart'
 import Step1 from '../Cart/Step1';
+import Step2 from '../Cart/Step2';
+import Step3 from '../Cart/Step3';
 
 export default class Site extends Component {
 
@@ -38,7 +40,7 @@ export default class Site extends Component {
         <Route exact path='/' component={Home} />
 
         {/* Product */}
-        <Route path='/productDetails' component={ProductDetails} />
+        <Route path='/product' component={Product} />
 
         {/* Cart Step */}
         <Route path='/cart' component={Cart} />

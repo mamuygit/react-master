@@ -4,12 +4,13 @@ import styled from "styled-components";
 
 import jpg from '../../images/craze-head.jpg'
 
-export default class Header extends Component {
-    render() {
-        const Logo = styled.img`
+const Logo = styled.img`
         width: 150px;
         margin: 15px 0px;
       `;
+
+export default class Header extends Component {
+    render() {
         return (
             <div className="header">
                 <Container>

@@ -13,12 +13,12 @@ export default class Cart extends Component {
                 <Container>
                     <Col sm="12">
                         <p><Link to="/">Home</Link></p>
-                        <p><Link to="/ProductDetails">ProductDetails</Link></p>
-                        <p><Link to="/Cart">Cart</Link></p>
+                        <p><Link to="/product">Product</Link></p>
+                        <p><Link to="/cart">Cart</Link></p>
                         <h1>Cart</h1>
-                        <Link to="/Cart/Step1">Step1</Link>
-                        , <Link to="/Cart/Step2">Step2</Link>
-                        , <Link to="/Cart/Step3">Step3</Link>
+                        <Link to="/cart/step1">Step1</Link>
+                        , <Link to="/cart/step2">Step2</Link>
+                        , <Link to="/cart/step3">Step3</Link>
                     </Col>
                 </Container>
             </div>
