@@ -3,19 +3,21 @@
   background-color: #fff;
   box-shadow: 0px 0px 5px #ccc;
   z-index: 0;
+  .container {
+    padding: 0;
+    }
 }
 
 .footer {
   color: #fff;
-  background-color: #000;
   text-align: center;
 
   .container {
-    opacity: .7;
-    padding: 20px 0 !important;
+  background-color: #000;
   }
 
   ul {
+    margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
@@ -24,17 +26,11 @@
   }
 }
 
-.home .container {
+.container {
   background-color: #fff;
   padding: 20px 0;
 }
 
-.product .container {
-  background-color: #fff;
-  padding: 20px 0;
-}
-
-.cart .container {
-  background-color: #fff;
-  padding: 20px 0;
+.opa-7 {
+  opacity: .7;
 }
