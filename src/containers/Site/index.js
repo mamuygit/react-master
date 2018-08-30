@@ -30,7 +30,6 @@ export default class Site extends Component {
     }).then(() => {
       console.log('Yay!1')
     })
-
   }
 
   render() {
@@ -38,15 +37,8 @@ export default class Site extends Component {
       <React.Fragment>
         <Header />
         <Route exact path='/' component={Home} />
-
-        {/* Product */}
-        <Route path='/product' component={Product} />
-
-        {/* Cart Step */}
-        <Route path='/cart' component={Cart} />
-        <Route path='/cart/step1' component={Step1} />
-        <Route path='/cart/step2' component={Step2} />
-        <Route path='/cart/step3' component={Step3} />
+        <Route exact path='/product' component={Product} />
+        <Route path='/product/123/cart/:step' component={Cart} />
         <Footer />
       </React.Fragment>
     );

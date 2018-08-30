@@ -8,9 +8,6 @@ export default class Product extends Component {
             <div className="product">
                 <Container>
                     <Col sm="12">
-                        <p><Link to="/">Home</Link></p>
-                        <p><Link to="/product">Product</Link></p>
-                        <p><Link to="/cart">Cart</Link></p>
                         <h1>Product</h1>
                     </Col>
                 </Container>
