@@ -6,7 +6,7 @@ import './site.scss';
 import Header from '../Header';
 import Footer from '../Footer'
 import Home from '../Home'
-import ProductDetails from '../ProductDetails'
+import Product from '../Product'
 import Cart from '../Cart'
 import Step1 from '../Cart/Step1';
 import Step2 from '../Cart/Step2';
