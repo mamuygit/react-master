@@ -9,6 +9,8 @@ import Home from '../Home'
 import ProductDetails from '../ProductDetails'
 import Cart from '../Cart'
 import Step1 from '../Cart/Step1';
+import Step2 from '../Cart/Step2';
+import Step3 from '../Cart/Step3';
 
 export default class Site extends Component {
 
@@ -28,7 +30,6 @@ export default class Site extends Component {
     }).then(() => {
       console.log('Yay!1')
     })
-
   }
 
   render() {
@@ -36,13 +37,8 @@ export default class Site extends Component {
       <React.Fragment>
         <Header />
         <Route exact path='/' component={Home} />
-
-        {/* Product */}
-        <Route path='/productDetails' component={ProductDetails} />
-
-        {/* Cart Step */}
-        <Route path='/cart' component={Cart} />
-        <Route path='/cart/step1' component={Step1} />
+        <Route exact path='/product' component={Product} />
+        <Route path='/product/123/cart/:step' component={Cart} />
         <Footer /> 
       </React.Fragment>
     );

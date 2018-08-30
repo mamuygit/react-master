@@ -6,7 +6,9 @@ export default class Step1 extends Component {
         return (
             <div className="cart">
                 <Container>
-                    <h1>P1~P1~P1</h1>
+                    <Col sm="12">
+                        <h1>P1~P1~P1</h1>
+                    </Col>
                 </Container>
             </div>
         );
