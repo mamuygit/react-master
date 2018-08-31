@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import styled from "styled-components";
 
-import jpg from '../../images/craze-head.jpg'
 import Flag from '../../components/Flag'
+import jpg from '../../images/craze-head.jpg'
 
 const Logo = styled.img`
         width: 150px;

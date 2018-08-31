@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { observer } from 'mobx-react';
 
 import autobind from 'autobind-decorator';
 
-export default class Step1 extends Component {
 
+@observer(['myStore'])
+
+export default class Step1 extends Component {
     constructor(props) {
-        super(props);
-        this.state = { value: '' };
+        super(props) 
+        console.log('a', props)
+        
     }
 
     componentDidMount() {
-        console.log("msg1: " + this.props.location.msg1);
+        this.props.myStore.orderId = 'Home1'
     }
 
-    @autobind
+
     submitForm(e) {
         this.props.history.push({
             pathname: './step2',
