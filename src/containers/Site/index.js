@@ -20,7 +20,7 @@ export default class Site extends Component {
         <Route exact path='/' component={Home} />
         <Route exact path='/product' component={Product} />
         <Route path='/product/123/cart/:step' component={Cart} />
-        <Footer />
+        <Footer /> 
       </React.Fragment>
     );
   }
