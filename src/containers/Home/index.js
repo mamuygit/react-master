@@ -14,10 +14,10 @@ export default class Home extends Component {
 
     @autobind
     checkout() {
-        this.props.myStore.orderId = '111'
+        const orderId = '111'
         this.props.history.push({
             pathname: '/product/cart/step1',
-            orderId: this.props.myStore.orderId
+            orderId: orderId
         });
     }
 

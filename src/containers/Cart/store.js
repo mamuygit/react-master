@@ -2,7 +2,7 @@ import { autorun, observable } from 'mobx';
 
 class CartStore {
     @observable cartId = '77777';
-    @observable orderId = 'null';
+    @observable orderId;
 }
 
 var cartStore = new CartStore;

@@ -24,7 +24,7 @@ export default class Site extends Component {
           </Provider>
           <Footer />
         </React.Fragment>
-      </Provider >
+      </Provider>
     );
   }
 }
