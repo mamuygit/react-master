@@ -9,9 +9,9 @@ import Step3 from '../Cart/Step3';
 export default class Cart extends Component {
 
     componentDidMount() {
-        console.log(this.props);
-        console.log(this.props.match.params.step);
-        console.log(this.props.match.url);
+        // console.log(this.props);
+        // console.log(this.props.match.params.step);
+        // console.log(this.props.match.url);
     }
 
     render() {
