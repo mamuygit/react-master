@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { inject, observer } from 'mobx-react';
-
 import autobind from 'autobind-decorator';
-
+import React, { Component } from 'react';
 
 @inject(['myStore'])
 @observer
@@ -11,21 +9,30 @@ import autobind from 'autobind-decorator';
 export default class Step1 extends Component {
     constructor(props) {
         super(props);
-        this.state = { value: '' };
-        console.log(props);
+        this.state = { firstname: '' };
+        if (typeof (props.location.orderId) != "undefined") {
+            props.myStore.orderId = props.location.orderId;
+        }
+        if (props.myStore.orderId == 'null') {
+            this.props.history.push({
+                pathname: '/',
+            });
+        }
+        // console.log("location: " + props.location.orderId);
+        // console.log("myStore: " + props.myStore.orderId);
+        console.log(props.myStore);
     }
 
     componentDidMount() {
-        console.log("msg1: " + this.props.location.msg1);
-        this.props.myStore.orderId = 'Home456';
+        // this.props.myStore.orderId = 'Home456';
+        // this.props.myStore.orderId = this.props.location.orderId;
     }
 
     @autobind
     submitForm(e) {
-        this.props.myStore.name = this.state.value;
+        // this.props.myStore.orderId = this.state.value;
         this.props.history.push({
             pathname: './step2',
-            msg1: this.state.value
         });
     }
 
@@ -42,13 +49,12 @@ export default class Step1 extends Component {
                     <Col sm="12">
                         <h1>P1~P1~P1</h1>
                         <p>myStore.orderId: {this.props.myStore.orderId}</p>
-                        <p>myStore.name: {this.props.myStore.name}</p>
                         <Col sm="4">
                             <div>
                                 {/* <form onSubmit={this.submitForm}> */}
-                                message: <input className="form-control" type="text" name="text" value={this.state.value} onChange={this.handleChange} />
+                                firstname: <input className="form-control" type="text" name="firstname" value={this.state.firstname} onChange={this.handleChange} />
                                 <br />
-                                <button className="btn btn-primary" type="submit" onClick={this.submitForm}>Submit</button>
+                                <button className="btn btn-primary" type="submit" onClick={this.submitForm}>Continue to Step2</button>
                                 {/* </form> */}
                             </div>
                         </Col>

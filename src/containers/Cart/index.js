@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Link, Route } from 'react-router-dom'
-
+import autobind from 'autobind-decorator';
+import React, { Component } from 'react';
 import Step1 from '../Cart/Step1';
 import Step2 from '../Cart/Step2';
 import Step3 from '../Cart/Step3';
-import autobind from 'autobind-decorator';
 
 export default class Cart extends Component {
 

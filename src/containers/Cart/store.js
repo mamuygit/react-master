@@ -1,12 +1,13 @@
 import { autorun, observable } from 'mobx';
 
-class HomeStore {
+class CartStore {
+    @observable cartId = '77777';
     @observable orderId = 'null';
 }
 
-var homeStore = new HomeStore;
+var cartStore = new CartStore;
 
-export default homeStore;
+export default cartStore;
 
 autorun(() => {
     //console.log(store);

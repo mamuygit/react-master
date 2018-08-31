@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
 
 export default class Product extends Component {
     render() {

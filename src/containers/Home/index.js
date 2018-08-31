@@ -1,25 +1,26 @@
-import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import autobind from 'autobind-decorator';
 import { inject, observer } from 'mobx-react';
+import autobind from 'autobind-decorator';
+import React, { Component } from 'react';
 
 @inject(['myStore'])
 @observer
-export default class Home extends Component {
 
+export default class Home extends Component {
     constructor(props) {
         super(props)
-        console.log(props);
+        console.log(props.myStore);
     }
 
     @autobind
     checkout() {
-        this.props.myStore.orderId = 'Home'
+        this.props.myStore.orderId = '111'
         this.props.history.push({
-            pathname: './product/123/cart/step1',
-            msg1: this.props.myStore.orderId
+            pathname: '/product/cart/step1',
+            orderId: this.props.myStore.orderId
         });
     }
+
     render() {
         return (
             <div className="home">
@@ -27,8 +28,7 @@ export default class Home extends Component {
                     <Col sm="12">
                         <h1>Home</h1>
                         <p>myStore.orderId: {this.props.myStore.orderId}</p>
-                        <p>myStore.name: {this.props.myStore.name}</p>
-                        <button className="btn btn-primary" onClick={this.checkout}>Checkout</button>
+                        <button className="btn btn-primary" onClick={this.checkout}>Checkout to change orderId to 111</button>
                     </Col>
                 </Container>
             </div>

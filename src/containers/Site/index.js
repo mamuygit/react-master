@@ -1,33 +1,30 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
-import autobind from 'autobind-decorator';
-
 import './site.scss';
-import Header from '../Header';
-import Footer from '../Footer'
-import Home from '../Home'
-import Product from '../Product'
-import Cart from '../Cart'
-import Step1 from '../Cart/Step1';
-import Step2 from '../Cart/Step2';
-import Step3 from '../Cart/Step3';
-import store from '../Home/store';
 import { Provider } from 'mobx-react';
+import { Switch, Route } from 'react-router-dom'
+import Cart from '../Cart'
+import cartStore from '../Cart/store';
+import Footer from '../Footer'
+import Header from '../Header';
+import Home from '../Home'
+import homeStore from '../Home/store';
+import Product from '../Product'
+import React, { Component } from 'react';
 
 export default class Site extends Component {
 
-
   render() {
     return (
-      <Provider myStore={store}>
+      <Provider myStore={homeStore}>
         <React.Fragment>
-            <Header />
-              <Route exact path='/' component={Home} />
-              <Route exact path='/product' component={Product} />
-              <Route path='/product/123/cart/:step' component={Cart} />
-            <Footer />
+          <Header />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/product' component={Product} />
+          <Provider myStore={cartStore}>
+            <Route path='/product/cart/:step' component={Cart} />
+          </Provider>
+          <Footer />
         </React.Fragment>
-      </Provider> 
+      </Provider >
     );
   }
 }
