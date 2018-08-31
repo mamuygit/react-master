@@ -25,9 +25,9 @@ export default class Cart extends Component {
                 <Container>
                     <Col sm="12">
                         <h1>Cart</h1>
-                        <Link to="./step1">Step1</Link>
+                        {/* <Link to="./step1">Step1</Link>
                         , <Link to="./step2">Step2</Link>
-                        , <Link to="./step3">Step3</Link>
+                        , <Link to="./step3">Step3</Link> */}
                         <Route path={`${this.props.match.url}`} component={component} />
                     </Col>
                 </Container>
