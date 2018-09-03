@@ -56,29 +56,27 @@ export default class Footer extends Component {
     render() {
         return (
             <div className="footer">
-                <Container>
-                    <Row>
-                        <Col sm="12">
-                            <p>Payment Detail | Delivery Detail | T&C | Privacy Policy | Return Policy | Contact us</p>
-                            <div className="opa-7">
-                                <span>#crazeTH</span>
-                                <ul>
-                                    <a href="https://www.facebook.com/crazeTH" target="_blank"><IconFacebook /></a>
-                                    <a href="https://www.instagram.com/crazeth" target="_blank"><IconInstagram /></a>
-                                    <a href="https://line.me/R/ti/p/%40craze.th" target="_blank"><IconLINE /></a>
-                                    <a href="https://www.youtube.com/channel/UCDWb_EXVMeu9jcM4F4tpYoQ" target="_blank"><IconYoutube /></a>
-                                </ul>
-                                <ul>
-                                    <IconCash />
-                                    <IconTransfer />
-                                    <IconVISA />
-                                    <IconMasterCard />
-                                    <IconDHL />
-                                </ul>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
+                <div className="con">
+                    <Col xs="12">
+                        <p>Payment Detail | Delivery Detail | T&C | Privacy Policy | Return Policy | Contact us</p>
+                        <div className="opa-7">
+                            <span>#crazeTH</span>
+                            <ul>
+                                <a href="https://www.facebook.com/crazeTH" target="_blank"><IconFacebook /></a>
+                                <a href="https://www.instagram.com/crazeth" target="_blank"><IconInstagram /></a>
+                                <a href="https://line.me/R/ti/p/%40craze.th" target="_blank"><IconLINE /></a>
+                                <a href="https://www.youtube.com/channel/UCDWb_EXVMeu9jcM4F4tpYoQ" target="_blank"><IconYoutube /></a>
+                            </ul>
+                            <ul>
+                                <IconCash />
+                                <IconTransfer />
+                                <IconVISA />
+                                <IconMasterCard />
+                                <IconDHL />
+                            </ul>
+                        </div>
+                    </Col>
+                </div>
             </div>
         );
     }

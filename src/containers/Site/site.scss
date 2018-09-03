@@ -1,19 +1,29 @@
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 .header {
   position: relative;
   background-color: #fff;
   box-shadow: 0px 0px 5px #ccc;
   z-index: 0;
   .container {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     }
 }
-
+.home {
+  flex: 1;
+}
 .footer {
   color: #fff;
   text-align: center;
 
-  .container {
+  .con {
   background-color: #000;
+  padding-top: 20px;
+  padding-bottom: 20px;
   }
 
   ul {
@@ -26,11 +36,62 @@
   }
 }
 
+.cart {
+  flex: 1;
+  .container:first-child {
+    background-color: #f2f2f2;
+  }
+}
+
 .container {
   background-color: #fff;
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .opa-7 {
   opacity: .7;
+}
+
+.allwrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .line {
+background-color: #d2d3d5;
+width: 20%;
+height: 1px;
+align-self: center;
+margin-bottom: 25px;
+  }
+  .wrap {
+    display: flex;
+    color: #bdbec0;
+    flex-wrap: wrap;
+    justify-content: center;
+    .number {
+      display: flex;
+      background-color: #fff;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #d2d3d5;
+    }
+    .desc {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+  .active {
+    .number {
+    background-color: #38a69c;
+    color: #fff;
+    border: none;
+    }
+    .desc {
+      color: #38a69c;
+    }
+  }
 }

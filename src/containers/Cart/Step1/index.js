@@ -37,11 +37,11 @@ export default class Step1 extends Component {
     componentWillUnmount() {
         console.log('view unmounted');
     }
-    
+
 
     @autobind
     submitForm(e) {
-        // this.props.myStore.orderId = this.state.value;
+        this.props.myStore.orderId = this.state.value;
         this.props.history.push({
             pathname: './step2',
         });
@@ -55,25 +55,22 @@ export default class Step1 extends Component {
 
 
     render() {
-        console.log('render step1');
         return (
-            <div className="cart">
-                <Container>
-                    <Col sm="12">
-                        <h1>P1~P1~P1</h1>
-                        <p>myStore.orderId: {this.props.myStore.orderId}</p>
-                    </Col>
-                    <Col sm="4">
-                        <div>
-                            {/* <form onSubmit={this.submitForm}> */}
-                            firstname: <input className="form-control" type="text" name="firstname" value={this.state.firstname} onChange={this.handleChange} />
-                            <br />
-                            <button className="btn btn-primary" type="submit" onClick={this.submitForm}>Continue to Step2</button>
-                            {/* </form> */}
-                        </div>
-                    </Col>
-                </Container>
-            </div>
+            <Row>
+                <Col xs="12">
+                    <h1>P1~P1~P1</h1>
+                    <p>myStore.orderId: {this.props.myStore.orderId}</p>
+                </Col>
+                <Col xs="4">
+                    <div>
+                        {/* <form onSubmit={this.submitForm}> */}
+                        firstname: <input className="form-control" type="text" name="firstname" onChange={this.handleChange} />
+                        <br />
+                        <button className="btn btn-primary" type="submit" onClick={this.submitForm}>Continue to Step2</button>
+                        {/* </form> */}
+                    </div>
+                </Col>
+            </Row>
         );
     }
 

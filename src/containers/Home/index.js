@@ -25,11 +25,13 @@ export default class Home extends Component {
         return (
             <div className="home">
                 <Container>
-                    <Col sm="12">
-                        <h1>Home</h1>
-                        <p>myStore.orderId: {this.props.myStore.orderId}</p>
-                        <button className="btn btn-primary" onClick={this.checkout}>Checkout to change orderId to 111</button>
-                    </Col>
+                    <Row>
+                        <Col xs="12">
+                            <h1>Home</h1>
+                            <p>myStore.orderId: {this.props.myStore.orderId}</p>
+                            <button className="btn btn-primary" onClick={this.checkout}>Checkout to change orderId to 111</button>
+                        </Col>
+                    </Row>
                 </Container>
             </div>
         );

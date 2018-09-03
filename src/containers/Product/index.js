@@ -7,7 +7,7 @@ export default class Product extends Component {
         return (
             <div className="product">
                 <Container>
-                    <Col sm="12">
+                    <Col xs="12">
                         <h1>Product</h1>
                     </Col>
                 </Container>
