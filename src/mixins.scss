@@ -1,0 +1,68 @@
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin sizeWidthAuto($height) {
+  width: auto;
+  height: $height;
+}
+@mixin sizeHeightAuto($width) {
+  width: $width;
+  height: auto;
+}
+
+
+@mixin clamp-text-2() {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@mixin ellipsis-2($line-height: 1.3em, $bg: #fff) {
+  background-color: $bg;
+  line-height: $line-height + 0.05;
+  max-height: $line-height * 2;
+  white-space: normal;
+  word-wrap: break-word;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  &:before,
+  &:after {
+    background-color: inherit;
+    position: absolute;
+  }
+  &:before {
+    padding-left: 2px;
+    content: '\002026';
+    right: 0;
+    top: $line-height;
+  }
+  &:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+  }
+}
